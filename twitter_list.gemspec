@@ -1,6 +1,8 @@
+require 'twitter_list/version'
+
 Gem::Specification.new do |s|
   s.name        = 'twitter_list'
-  s.version     = '0.0.0'
+  s.version     = TwitterList::VERSION
   s.executables << 'twitter_list'
   s.date        = '2016-07-18'
   s.summary     = "A gem to interface with Twitter Lists!"
