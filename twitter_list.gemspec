@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.files       = ["lib/twitter_list.rb"]
   s.homepage    =
     'http://rubygems.org/gems/twitter_list'
-  s.license       = 'GNU License'
+  s.license       = 'MIT License'
 end
