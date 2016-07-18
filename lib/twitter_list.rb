@@ -1,7 +1,4 @@
+
 require 'twitter_list/version'
+require 'twitter_list/scraper'
 
-module TwitterList
-
-  class Scraper
-  end
-end
