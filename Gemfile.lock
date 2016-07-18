@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    twitter_list (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,10 +50,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1.11)
   coveralls
-  pry
-  rake
-  rspec (>= 3.4.0)
+  pry (~> 0.10)
+  rake (~> 11.2)
+  rspec
+  twitter_list!
 
 BUNDLED WITH
    1.12.5
