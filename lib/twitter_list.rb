@@ -1,3 +1,4 @@
+require 'twitter'
 require 'dotenv'
 
 require 'twitter_list/version'
