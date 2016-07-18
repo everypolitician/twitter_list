@@ -54,3 +54,4 @@ build-iPhoneSimulator/
 
 .coveralls.yml
 .env
+Gemfile.lock
