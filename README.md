@@ -12,32 +12,6 @@ Writing each of those scrapers currently requires a lot of boiler-plate code (se
 This makes them not only much simpler and easier to create in the first place, but means when we want to do something new with those scrapers, we should only need to update a single gem, rather than end up with hundreds of scrapers all slightly out of sync with each other needing to be updated individually.
 
 
-## How to use this project
-
-This is a Ruby project.
-You will need to tell your favourite Ruby version manager to set your local Ruby version to the one specified in the `.ruby-version` file.
-
-For example, if you are using [rbenv](https://cbednarski.com/articles/installing-ruby/):
-
-1. Install the right Ruby version:
-```bash
-$ rbenv install < VERSION >
-$ rbenv rehash
-```
-1. Move to the root directory of this project and type:
-```bash
-$ rbenv local < VERSION >
-$ ruby -v
-```
-
-You will also need to install the `bundler` gem, which will allow you to install the rest of the dependencies listed in the `Gemfile` file of this project.
-
-```bash
-$ gem install bundler
-$ rbenv rehash
-```
-
-
 ### Folder structure
 
 * `bin `: Executables
@@ -55,11 +29,24 @@ $ vi .env
 ```
 
 
-### To initialise the project
+### Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'twitter_list'
+```
+
+And then execute:
 
 ```bash
-$ bundle install
-$ bundle exec rake
+$ bundle
+```
+
+Or install it yourself as:
+
+```bash
+$ gem install twitter_list
 ```
 
 
@@ -70,19 +57,16 @@ $ bundle exec rspec
 ```
 
 
-### To run the app
+### Development
 
-Make sure that the `bin/app` file has execution permissions:
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-```bash
-$ chmod +x bin/app
-```
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-Then just type:
 
-```bash
-$ bin/app
-```
+### Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/twitter_list.
 
 
 ## License
