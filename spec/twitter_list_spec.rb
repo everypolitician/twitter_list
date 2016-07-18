@@ -1,7 +1,7 @@
 describe TwitterList do
 
-  it 'smoke test' do
-    expect( TwitterList.new.hello ).to eq("Hello world")
+  it "has a version number" do
+    expect(TwitterList::VERSION).not_to be_nil
   end
 
 end

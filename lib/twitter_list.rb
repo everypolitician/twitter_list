@@ -1,12 +1,7 @@
-# require 'bundler/setup'
-# require 'scraperwiki'
-# require 'twitter'
-# require 'pry'
+require 'twitter_list/version'
 
-class TwitterList
+module TwitterList
 
-  def hello
-    "Hello world"
+  class Scraper
   end
-
 end
