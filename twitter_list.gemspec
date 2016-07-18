@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '>=3.4.0'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'pry', '~> 0.10'
+  s.add_development_dependency 'dotenv'
 end

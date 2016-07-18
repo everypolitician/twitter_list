@@ -45,6 +45,16 @@ $ rbenv rehash
 * `spec`: Tests
 
 
+### Environment configuration
+
+Configure the environment by copying `.env.example` and following the instructions inside to configure the app.
+
+```bash
+$ cp .env.example .env
+$ vi .env
+```
+
+
 ### To initialise the project
 
 ```bash

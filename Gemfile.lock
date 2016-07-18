@@ -15,6 +15,7 @@ GEM
       tins (~> 1.6.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    dotenv (2.1.1)
     json (2.0.1)
     method_source (0.8.2)
     pry (0.10.4)
@@ -52,9 +53,10 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.11)
   coveralls
+  dotenv
   pry (~> 0.10)
   rake (~> 11.2)
-  rspec
+  rspec (>= 3.4.0)
   twitter_list!
 
 BUNDLED WITH
