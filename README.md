@@ -54,7 +54,7 @@ Then you can pass them as four separate tokens or as one that contains the four 
 #### Four separate credentials
 
 ```ruby
-twitter list = TwitterList.new(
+twitter_list = TwitterList::Scraper.new(
   consumer_key:        TWITTER_CONSUMER_KEY,
   consumer_secret:     TWITTER_CONSUMER_SECRET,
   access_token:        TWITTER_ACCESS_TOKEN,
@@ -71,7 +71,7 @@ If you do so, separate them by a pipe (i.e. CREDENTIAL1|CREDENTIAL2 etc.) and ma
 sure they are in the right order:
 
 ```ruby
-twitter list = TwitterList.new(
+twitter_list = TwitterList::Scraper.new(
   twitter_tokens: "#{TWITTER_CONSUMER_KEY}|#{TWITTER_CONSUMER_SECRET}|#{TWITTER_ACCESS_TOKEN}|#{TWITTER_ACCESS_TOKEN_SECRET}"
 )
 
