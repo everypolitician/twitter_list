@@ -105,7 +105,7 @@ To learn more about how the Twitter credentials (and in particular this variable
 
 ### Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/twitter_list.
+Bug reports and pull requests are welcome on GitHub at https://github.com/everypolitician/twitter_list.
 
 
 ## License
