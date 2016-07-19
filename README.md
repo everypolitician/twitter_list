@@ -19,16 +19,6 @@ This makes them not only much simpler and easier to create in the first place, b
 * `spec`: Tests
 
 
-### Environment configuration
-
-Configure the environment by copying `.env.example` and following the instructions inside to configure the app.
-
-```bash
-$ cp .env.example .env
-$ vi .env
-```
-
-
 ### Installation
 
 Add this line to your application's Gemfile:
@@ -50,20 +40,6 @@ $ gem install twitter_list
 ```
 
 
-### To run the tests
-
-```bash
-$ bundle exec rspec
-```
-
-
-### Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-
 ### How to use it
 
 This gem will scrape the Twitter list and return a hash with the following information:
@@ -72,7 +48,7 @@ This gem will scrape the Twitter list and return a hash with the following infor
 * Twitter handle
 * Link to avatar picture
 
-First generate new twitter credentials here: https://apps.twitter.com/
+First generate new twitter credentials here: https://apps.twitter.com/.
 Then you can pass them as four separate tokens or as one that contains the four of them.
 
 #### Four separate credentials
@@ -101,6 +77,30 @@ twitter list = TwitterList.new(
 
 people = twitter_list.people('lechinoise', 'politic-arg')
 ```
+
+
+### Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+
+### To run the tests
+
+```bash
+$ bundle exec rspec
+```
+
+**Note:** The test suite uses [vcr](https://github.com/vcr/vcr) to record the HTTP requests to Twitter, so that it can test against actual Twitter responses. If you want to re-record the cassettes in VCR, then you will have to set the `TWITTER_TOKENS` variable in your environment, since it is used in the `spec_helper.rb` file. You only need to set the environment variable if you’re recording new cassettes from real Twitter responses.
+
+For example:
+
+```bash
+$ export TWITTER_TOKENS=replace_with_twitter_tokens
+```
+
+To learn more about how the Twitter credentials (and in particular this variable) are set, check out the section "How to use it" above.
 
 
 ### Contributing
