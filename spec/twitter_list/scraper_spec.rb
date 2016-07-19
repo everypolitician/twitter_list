@@ -48,8 +48,10 @@ describe TwitterList::Scraper do
   end
 
   describe "when getting the list of Twitter handles", :vcr do
-    let(:tokens)  {ENV['TWITTER_TOKENS']}
+    let(:tokens)  {ENV['TWITTER_TOKENS'].to_s}
     let(:people) {TwitterList::Scraper.new(twitter_tokens: tokens).people('lechinoise', 'politic-arg')}
+
+    before { stub_request(:post, 'https://api.twitter.com/oauth2/token') }
 
     it "gets the right Twitter id" do
       expect(people.first[:id]).to eq(717802179415969792)
