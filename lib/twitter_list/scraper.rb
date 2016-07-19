@@ -22,7 +22,7 @@ module TwitterList
           id: person.id,
           name: person.name,
           twitter: person.screen_name,
-          image: person.default_profile_image? ? '' : person.profile_image_url_https(:original).to_s,
+          image: person.default_profile_image? ? '' : person.profile_image_url_https(:original).to_s
         }
       end
     end
