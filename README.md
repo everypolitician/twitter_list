@@ -24,25 +24,26 @@ This makes them not only much simpler and easier to create in the first place, b
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'twitter_list'
+gem 'twitter_list', git: 'https://github.com/everypolitician/twitter_list.git'
 ```
 
 And then execute:
 
 ```bash
-$ bundle
+$ bundle install
 ```
 
-Or install it yourself as:
+You could also execute:
 
 ```bash
-$ gem install twitter_list
+$ bin/setup
 ```
 
+just make sure that `bin/setup` has the right permissions (run `$ chmod +x bin/setup` if not).
 
 ### How to use it
 
-This gem will scrape the Twitter list and return a hash with the following information:
+This gem will scrape the Twitter list and return an array of hashes with the following information:
 * Twitter id
 * Twitter name
 * Twitter handle
@@ -78,12 +79,15 @@ twitter_list = TwitterList::Scraper.new(
 people = twitter_list.people('lechinoise', 'politic-arg')
 ```
 
+**Caveat:** *Make sure that your tokens don't include the pipe symbol!*
+
 
 ### Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+<!-- COMMENTING THIS UNTIL IT IS PUSHED TO RUBY GEMS
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). -->
 
 
 ### To run the tests
