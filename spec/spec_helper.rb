@@ -6,8 +6,10 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
-  ENV['MORPH_TWITTER_TOKENS'].split('|').each_with_index do |secret, i|
-    c.filter_sensitive_data("<twitter_#{i}>") { secret }
+  if ENV.key?('TWITTER_TOKENS')
+    ENV['TWITTER_TOKENS'].split('|').each_with_index do |secret, i|
+      c.filter_sensitive_data("<twitter_#{i}>") { secret }
+    end
   end
 end
 

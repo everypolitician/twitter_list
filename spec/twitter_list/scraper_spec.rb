@@ -48,7 +48,7 @@ describe TwitterList::Scraper do
   end
 
   describe "when getting the list of Twitter handles", :vcr do
-    let(:tokens)  {ENV['MORPH_TWITTER_TOKENS']}
+    let(:tokens)  {ENV['TWITTER_TOKENS']}
     let(:people) {TwitterList::Scraper.new(twitter_tokens: tokens).people('lechinoise', 'politic-arg')}
 
     it "gets the right Twitter id" do
