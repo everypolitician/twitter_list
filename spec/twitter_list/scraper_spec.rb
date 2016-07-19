@@ -47,4 +47,13 @@ describe TwitterList::Scraper do
     end
   end
 
+  describe "when getting the list of Twitter handles", :vcr do
+    let(:tokens)  {ENV['MORPH_TWITTER_TOKENS']}
+    let(:scraper) {TwitterList::Scraper.new(twitter_tokens: tokens)}
+
+    it "gets the right twitter id" do
+      expect(scraper.people('lechinoise', 'politic-arg').first[:id]).to eq(717802179415969792)
+    end
+  end
+
 end
