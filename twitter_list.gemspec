@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.date          = '2016-07-18'
 
+  s.add_runtime_dependency 'twitter'
+
   s.add_development_dependency 'bundler', '~> 1.11'
   s.add_development_dependency 'rake', '~> 11.2'
   s.add_development_dependency 'rspec', '>=3.4.0'
