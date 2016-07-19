@@ -53,3 +53,4 @@ build-iPhoneSimulator/
 .rvmrc
 
 .coveralls.yml
+Gemfile.lock

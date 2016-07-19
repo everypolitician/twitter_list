@@ -1,12 +1,5 @@
-# require 'bundler/setup'
-# require 'scraperwiki'
-# require 'twitter'
-# require 'pry'
+require 'bundler/setup'
+require 'twitter'
 
-class TwitterList
-
-  def hello
-    "Hello world"
-  end
-
-end
+require 'twitter_list/version'
+require 'twitter_list/scraper'
