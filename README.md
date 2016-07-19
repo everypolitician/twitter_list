@@ -64,6 +64,45 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 
+### How to use it
+
+This gem will scrape the Twitter list and return a hash with the following information:
+* Twitter id
+* Twitter name
+* Twitter handle
+* Link to avatar picture
+
+First generate new twitter credentials here: https://apps.twitter.com/
+Then you can pass them as four separate tokens or as one that contains the four of them.
+
+#### Four separate credentials
+
+```ruby
+twitter list = TwitterList.new(
+  consumer_key:        TWITTER_CONSUMER_KEY,
+  consumer_secret:     TWITTER_CONSUMER_SECRET,
+  access_token:        TWITTER_ACCESS_TOKEN,
+  access_token_secret: TWITTER_ACCESS_TOKEN_SECRET
+)
+
+people = twitter_list.people('lechinoise', 'politic-arg')
+```
+
+#### One single variable containing the four credentials
+
+You could also set a single variable to pass the previous four credentials at once.
+If you do so, separate them by a pipe (i.e. CREDENTIAL1|CREDENTIAL2 etc.) and make
+sure they are in the right order:
+
+```ruby
+twitter list = TwitterList.new(
+  twitter_tokens: "#{TWITTER_CONSUMER_KEY}|#{TWITTER_CONSUMER_SECRET}|#{TWITTER_ACCESS_TOKEN}|#{TWITTER_ACCESS_TOKEN_SECRET}"
+)
+
+people = twitter_list.people('lechinoise', 'politic-arg')
+```
+
+
 ### Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/twitter_list.
