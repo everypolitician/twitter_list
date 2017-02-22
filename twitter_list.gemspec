@@ -28,5 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'webmock'
-  s.add_development_dependency 'vcr'
+  s.add_development_dependency 'vcr', '~> 3.0.3'
 end
