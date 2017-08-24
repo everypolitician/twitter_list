@@ -13,6 +13,8 @@ module TwitterList
         config.consumer_secret     = tokens[:consumer_secret]     || consumer_secret
         config.access_token        = tokens[:access_token]        || access_token
         config.access_token_secret = tokens[:access_token_secret] || access_secret
+        # See: https://github.com/lostisland/faraday/blob/e74f24d852ac467139ca7485744d46c1ee5060c8/lib/faraday/request/retry.rb
+        config.middleware.insert_before Twitter::REST::Response::RaiseError, Faraday::Request::Retry, max: 10, exceptions: [Twitter::Error::NotFound]
       end
     end
 
